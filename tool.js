@@ -29,13 +29,14 @@ const overlay = document.querySelector('.overlay');
 const showModal = document.querySelectorAll('.show-modal')
 
 
+showModal.forEach(modal => modal.addEventListener('click', openModal)) 
 function openModal() {
     modal.classList.remove('hidden');
     overlay.classList.remove('hidden');
 }
-for(let i = 0; i < showModal.length; i++) {
-    showModal[i].addEventListener('click', openModal);
-};
+// for(let i = 0; i < showModal.length; i++) {
+//     showModal[i].addEventListener('click', openModal);
+// };
 
 function closeModal() {
     modal.classList.add('hidden')
